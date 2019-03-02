@@ -85,45 +85,8 @@ unsigned int tabspaces = 8;
 /* bg opacity */
 unsigned int alpha = 0xdd;
 
-/* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
-	/* 8 normal colors */
-	"#000000",
-	"#cc342b",
-	"#198844",
-	"#fba922",
-	"#3971ed",
-	"#a36ac7",
-	"#28a0c2",
-	"#c5c8c6",
-
-	/* 8 bright colors */
-	"#969896",
-	"#df5e56",
-	"#46cf7b",
-	"#fac66f",
-	"#709af7",
-	"#c797e5",
-	"#55daf1",
-	"#ffffff",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"black",
-};
-
-
-/*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+/* Terminal colors from pywal */
+#include "colors-wal-st.h"
 
 /*
  * Default shape of cursor
